@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "SuccessfulAdmin";
+}
+
+<div class="container">
+    <div class="alert alert-block alert-success">
+       <h4 class="alert-heading">Congratulations!</h4>
+       <p>You are now logged in as Admin.</p>
+        <br/><br/>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>  
+        <div class="col-xs-6 col-md-4">
+            <a href="#" class="thumbnail">
+              <img src="\Images\search.png" alt="nothing">
+                <h3 class="text-center">Search User</h3>
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <a href=@Url.Action("UploadMovie","Movie") class="thumbnail">
+              <img src="\Images/delete.png" alt="...">
+                <h3 class="text-center">Delete User</h3>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4"></div>
+            <div class="col-xs-6 col-md-4">
+            <a href="#" class="thumbnail">
+              <img src="\Images/spam.jpg" alt="...">
+                <h3 class="text-center">Spam Detection/Removing Spams</h3>
+            </a>
+            </div>
+            
+        </div>
+</div>
+

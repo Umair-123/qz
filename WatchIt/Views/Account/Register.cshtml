@@ -1,0 +1,50 @@
+﻿@model WatchIt.Models.User
+@{
+    ViewBag.Title = "Register";
+}
+
+
+<div class="container">
+    <h2>Register YourSelf</h2>
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+             @Html.ValidationSummary(true)
+		<form class="form" action="Register" method="post">
+         
+			<div class="editor-Label">
+                @Html.LabelFor(Model=>Model.UserName)
+                @Html.ValidationMessageFor(model => model.UserName)
+			</div>
+            <div class="editor-field" id="loginbtncheck">
+
+                @*@Html.TextBoxFor(Model=>Model.UserName)*@
+                <input type="text" id="UserName" name="UserName">
+                <input type="button" id="btnCheck" value="CheckUserName">
+                <div id="result"></div>
+			</div>
+            <div class="editor-Label">
+                @Html.LabelFor(Model=>Model.Password)
+               
+                
+			</div>
+            <div class="editor-field">
+                <input type="password" id="userpass" name="Password">
+                @*@Html.TextBoxFor(Model=>Model.Password)*@
+			</div>
+            <div class="editor-Label">
+                @Html.LabelFor(Model=>Model.Password)
+			</div>
+            <div class="editor-field ">
+                @Html.TextBoxFor(Model=>Model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+			</div>
+          
+			<br/>
+			<input class="form-control btn btn-lg btn-primary" type="submit">
+		</form>		
+            
+        
+    </div>
+	</div>

@@ -1,0 +1,113 @@
+@*http://eadtermprojectbcsf12a002.apphb.com/*@
+@{
+    ViewBag.Title = "Watch It ;) ";
+}
+
+<!-- Slider -->
+	<div id="bzns-slider" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators
+	  <ol class="carousel-indicators">
+	    <li data-target="#bzns-slider" data-slide-to="0" class="active"></li>
+	    <li data-target="#bzns-slider" data-slide-to="1"></li>
+	    <li data-target="#bzns-slider" data-slide-to="2"></li>
+	  </ol>
+	  -->
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <div class="bzns-slide">
+	      	<div class="container">
+		      	<img src="Images/movie1.png" class="img-circle bzns-profile">
+		      	<div class="rev-desc">
+		      		<h3>The God Father <span>Great Movie</span></h3>
+		      	</div>
+	      	</div>
+	      </div>
+	    </div>
+	    
+	    <div class="item">
+	      <div class="bzns-slide">
+	      	<div class="container">
+		      	<img src="Images/movie1.png" class="img-rectangle">
+		      	<div class="rev-desc">
+		      		<h3>Suggest Your friends<span> Movies from All Categories</span></h3>
+		      	</div>
+	      	</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#bzns-slider" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#bzns-slider" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+	<!-- / Slider -->
+<div class="container" style="padding-top:150px">
+        <div class="jumbotron">
+            <h1>Watch It</h1>
+                <p>Its a Place where you can suggest movies of All genres to your friends. Which Movies You are watching these Days?</p>
+                @*<div class="btn btn-primary btn-lg" >
+                    @Html.ActionLink("Register Yourself","Register","Account")
+                </div>*@
+            <a class="btn btn-primary btn-lg" role="button" href="@Url.Action("Register","Account")">Register Yourself</a>
+
+        </div>
+    </div>
+    <div class="container" style="padding-top:50px">
+        <h1>Genres</h1>
+            
+                <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/action.jpg" alt="..." width="234" height="90"/>
+                                <h3 class="text-center">Action</h3>
+                        </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                        <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/horror.jpg" alt="..." width="234" height="90"/>
+                            <h3 class="text-center">Horror</h3>
+                        </a>
+                        </div>
+                    </div>
+     
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/documentry.png" alt="..." width="234" height="90"/>
+                                <h3 class="text-center">Documentry</h3>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                        <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images\comedy.jpg" alt="..." width="234" height="90"/>
+                            <h3 class="text-center">Comedy</h3>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/romance.jpg" alt="..." width="234" height="90"/>
+                                <h3 class="text-center">Romance</h3>
+                        </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                        <a href="@Url.Action("MoviesCategories","Search")" class="thumbnail">
+                          <img src="\Images/romance.jpg" alt="..." width="234" height="90"/>
+                            <h3 class="text-center">Family</h3>
+                        </a>
+                        </div>
+                    </div>
+               
+    </div>

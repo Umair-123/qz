@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/alert_plugin/themes/alertify.core.css" rel="stylesheet" />
+    <link href="~/alert_plugin/themes/alertify.default.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="@Url.Action("index", "Home")" style="font-family:'BatangChe';font-size:30px"  >
+            Watch It
+        </a>
+        <form class="navbar-form navbar-right" role="search" >
+            @*<div class="form-group">
+               <input type="text" class="form-control" placeholder="Search Movies"/>
+            </div>*@
+
+            
+            <a type="button" class="btn btn-default btn-lg" href="@Url.Action("SearchMovies", "Search")" >Search Movies</a>
+            <a type="button" class="btn btn-default btn-lg" href="@Url.Action("Login", "Account")" >Login</a>
+            @*<a type="button" id="facebookbtn" class="btn btn-default btn-lg" href="https:www.facebook.com" >Go to FaceBook</a>*@
+        </form>
+        
+    </div>
+    </nav>
+   
+
+    <nav class="navbar navbar-default ">
+        <div class="container">
+            <h2>Its Footer</h2>
+        </div>
+    </nav>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+     @Scripts.Render("~/Scripts/Bootstrap")
+
+    @RenderSection("scripts", required: false)
+    
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    
+    <script src="~/alert_plugin/alertify.min.js"></script>
+    <script src="~/pass-complex-plugin/jquery.complexify.min.js"></script>
+    <script src="~/Scripts/UserName.js"></script>
+    <script src="~/Scripts/searchMovies.js"></script>
+    <script src="~/Scripts/jquery.sticky.js"></script>
+</body>
+</html>

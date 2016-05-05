@@ -1,0 +1,50 @@
+﻿@model WatchIt.Models.Movie
+@{
+    ViewBag.Title = "UploadMovie";
+}
+
+<h2>UploadMovie</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            </div>
+        <div class="col-md-4">
+@using (Html.BeginForm("SaveMovie", "Movie", FormMethod.Post, new { enctype="multipart/form-data"}))
+{
+      <div class="form-group">
+    <label for="title">Movie Title</label>
+    <input type="text" class="form-control" id="title" name="Title">
+  </div>
+  <div class="form-group">
+    <label for="Director">Director</label>
+    <input type="text" class="form-control" id="Director" name="Director">
+  </div>
+    <div class="form-group">
+    <label for="year">Year Of Realease</label>
+    <input type="text" class="form-control" id="year" name="YearReleased">
+  </div>
+    <div class="form-group">
+      <label for="selectMovie">Select Category(Genre Of Movie):</label>
+      <select class="form-control" id="selectMovie" name="Genre">
+        <option>Action</option>
+        <option>Horror</option>
+        <option>Documentry</option>
+        <option>Comedy</option>
+        <option>Romance</option>
+        <option>Family</option>
+      </select>
+     </div>
+
+    
+  <div class="form-group">
+    <label for="poster">Poster for Movie</label>
+    <input type="file" id="poster" name="PosterImage">
+    <p class="help-block">Try to upload small size Image.</p>
+  </div>
+  <button type="submit" class="btn btn-default">Upload This Movie</button>
+}
+       
+            </div>
+        
+    </div>
+	</div>
